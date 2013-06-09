@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $FreeBSD: release/9.1.0/etc/rc.d/cron 231653 2012-02-14 10:16:56Z dougb $
+#
+
+# PROVIDE: cron
+# REQUIRE: LOGIN cleanvar
+# BEFORE: securelevel
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="cron"
+rcvar="cron_enable"
+command="/usr/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+
+load_rc_config $name
+if checkyesno cron_dst
+then
+	cron_flags="$cron_flags -s"
+fi
+run_rc_command "$1"
