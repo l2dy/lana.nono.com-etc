@@ -31,3 +31,4 @@ hast:*:845:
 nogroup:*:65533:
 nobody:*:65534:
 cunnie:*:2000:
+dhcpd:*:136:
