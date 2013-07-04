@@ -1,6 +1,6 @@
 # $FreeBSD: release/9.1.0/etc/group 218046 2011-01-28 22:28:12Z pjd $
 #
-wheel:*:0:root,cunnie
+wheel:*:0:root,cunnie,ping
 daemon:*:1:
 kmem:*:2:
 sys:*:3:
@@ -31,4 +31,5 @@ hast:*:845:
 nogroup:*:65533:
 nobody:*:65534:
 cunnie:*:2000:
+ping:*:2002:
 dhcpd:*:136:
